@@ -1,2 +1,2 @@
-# ConsumerProtection
-Research and develop tools to provide a way for consumers to secure sensitive data and become knowledgeable of various ways to protect themselves online.
+# Pensieve
+Pensieve is a chrome extension that connects to the ethereum block chain to secure user information and provides notification of at risk data. This tool is currently in development. Stay tuned for updates in the coming week.
