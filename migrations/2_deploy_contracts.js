@@ -1,0 +1,7 @@
+var People = artifacts.require("./People.sol");
+
+module.exports = function(deployer) {
+  //deployer.deploy(ConvertLib);
+  //deployer.link(ConvertLib, MetaCoin);
+  deployer.deploy(People);
+};
