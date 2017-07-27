@@ -1,0 +1,9 @@
+Open a NEW PowerShell prompt as Administrator (to ensure that it reloads )
+
+npm install -g npm
+npm install -g –production windows-build-tools
+npm install -g ethereumjs-testrpc
+npm install -g truffle
+
+You may see some error messages during npm installs. Many of these are just informational / optional components failing. 
+You can test that it is all working by trying to run the commands truffle and testrpc.
