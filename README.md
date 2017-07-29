@@ -122,3 +122,6 @@ What is great about this is that we can make changes and our react app will upda
 ![alt text](https://user-images.githubusercontent.com/7606502/28741861-00fe1b04-73d5-11e7-9bc6-566747bc69d4.PNG)
 
 The react session should open in the default browser on localhost:3000. There we see our table full of people we have pushed onto the blockchain. This is now a fully running dApp!
+
+## Stay Tuned for Updates
+More changes to come. We are currently developing our dApp with a working tool by early August.
