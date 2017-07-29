@@ -21,6 +21,11 @@ npm install -g truffle
 There may be some error messages during npm installs. Many of these are just informational / optional components failing. 
 To test that it is all working try to run the commands for testrpc and truffle.
 
+### Running TestRPC
+The testrpc will automatically create ten default accounts. We can use them to do a variety of transactions. The testrpc must be running in another terminal window in order for truffle to work.
+
+![alt text](https://user-images.githubusercontent.com/7606502/28741854-edc8d59c-73d4-11e7-8cce-0ad08e4f0f68.PNG)
+
 ### Using Truffle
 Once truffle is installed you can begin using truffle from within the working directory of your project. In the terminal
 navigate to your project directory. Make sure that your testrpc is running in another window.
@@ -54,10 +59,16 @@ Once the contract is deployed we can get some quick information about it by call
 ````
 People.abi			
 ````
+
+![alt text](https://user-images.githubusercontent.com/7606502/28741858-edda1af0-73d4-11e7-84bb-eeb2b0dae7a5.PNG)
+
 Query for the functions and parameters provided by the contract
 ````
 People.address		
 ````
+
+![alt text](https://user-images.githubusercontent.com/7606502/28741857-edc91296-73d4-11e7-9123-20644adce116.PNG)
+
 Query for the address of the contract and print it in the console
 
 ### Setting Up Function Calls
@@ -70,6 +81,9 @@ We can now call functions by instantiating the People contract and calling funct
 ````
 people.then(function(instance) { return instance.addPerson("Albus","Dumbledore", 150) }).then(function(result) { console.log("addition successful") }).catch(function(e) { console.log("error!") });
 ````
+
+![alt text](https://user-images.githubusercontent.com/7606502/28741853-edc8494c-73d4-11e7-8926-3bbbe21128a8.PNG)
+
 The main piece to this function call is the return statement: return instance.addPerson("Albus","Dumbledore", 150)
 
 This is where we can modify information of the people before we add them. A successful addition of a person will return "addition successful" to the console. The ending catch statement will return "error" if there is no contract deployed that we are calling. From what I have read this has to do with a common javascript idea called promises. 
@@ -82,6 +96,9 @@ Next we can query for all of the people held within our array on the blockchain.
 ````
 people.then(function(instance) { return instance.getPeople().then(console.log) }).then(function(result) { console.log("retrieval successful") }).catch(function(e) { console.log("error!") });
 ````
+
+![alt text](https://user-images.githubusercontent.com/7606502/28741856-edc8f36a-73d4-11e7-8d3e-804bbe6ebf14.PNG)
+
 This function call has a similar structure but instead of addPerson() we are calling getPeople(). The then(console.log) just ensures that the returned people are printed in the console so we can see them. The first and last names will print as a long string of hex values within the console. We will deal with changing them later to string values. You can verify the names by tossing
 them into a hex to ascii converter for the moment.
 
@@ -96,6 +113,12 @@ Once the code has been replaced run
 ````
 npm install
 ````
-to install any additional dependencies (web3 and lodash). After this installs run the react app "npm start" and it will load a development server for us to use locally. What is great about this is that we can make changes and our react app will update automatically without needing to restart. This is especially cool when making changes to UI on the fly.
+to install any additional dependencies (web3 and lodash). After this installs run the react app "npm start" and it will load a development server for us to use locally. 
+
+![alt text](https://user-images.githubusercontent.com/7606502/28742142-77bba858-73dd-11e7-84ac-e60615862a5e.PNG)
+
+What is great about this is that we can make changes and our react app will update automatically without needing to restart. This is especially cool when making changes to UI on the fly.
+
+![alt text](https://user-images.githubusercontent.com/7606502/28741861-00fe1b04-73d5-11e7-9bc6-566747bc69d4.PNG)
 
 The react session should open in the default browser on localhost:3000. There we see our table full of people we have pushed onto the blockchain. This is now a fully running dApp!
