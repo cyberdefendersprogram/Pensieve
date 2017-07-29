@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from 'C:/Users/nicha/Documents/peoplelist/peoplelistui/src/key.png';
+import logo from 'C:/Users/nicha/Documents/Pensieve/pensieveui/src/key.png';
 import './App.css';
 import Web3 from 'web3'
 import _ from 'lodash'
