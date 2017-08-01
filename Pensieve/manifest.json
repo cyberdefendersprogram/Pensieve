@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+
+  "name": "Pensieve",
+  "description": "Store Information",
+  
+  "browser_action": {
+    "default_popup": "/html/main.html",
+	"default_icon": "/images/owl.png"
+  },
+  
+  "icons": {
+    "128": "/images/owl.png",
+    "64": "/images/owl.png",
+    "48": "/images/owl.png"
+  },
+  
+  "version": "1.0",
+  "permissions": [
+	"storage"
+  ]
+}

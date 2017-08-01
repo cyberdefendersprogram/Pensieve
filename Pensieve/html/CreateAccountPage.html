@@ -1,0 +1,48 @@
+
+<html>
+
+<head> 
+	<title>Pensieve</title>
+	<script type="text/javascript">
+	function submitFunction()
+	{
+		var x=document.forms["frm"]["password"].value;
+		var y=document.forms["frm"]["confirmPassword"].value;
+		if(x==null||x==""||y==null||y=="")
+		{
+			alert("Both fields can't be empty.");
+			return false;
+		}
+		else
+		{
+			if(x==y)
+			{
+				alert("Passwords Saved");
+				//chrome.storage.sync.set({'value': x}, function() {
+				//});
+				return true;
+			}
+			else
+			{
+				alert("Password's do not match!");
+				return false;
+			}
+		}
+		
+	}
+	</script>
+</head>
+<body>
+	<center><h2>Create New Account</h2></center>
+	<form name="frm" action="/html/UsersHomePage.html" onsubmit="return submitFunction()" method="post">
+	
+		<center><h3>Enter New Password</h3></center>
+		Enter Password<input type="password" name="password" placeholder="Enter Password" required>
+		<br>
+		Confirm Password<input type="password" name="confirmPassword" placeholder="Re-Enter Password" required>
+		<br>
+		<input type="submit" value="Submit"/>
+		<input type="reset" value="Reset"/>
+	</form>
+</body>
+</html>

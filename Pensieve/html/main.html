@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html lang="en">
+
+<head> 
+	<title>Pensieve</title>
+</head>
+
+<body>
+	<center><h2>Pensieve</h2></center>
+	<center><img src="/images/owl.png" alt="owl" style="width:100px"></center>
+		<form name="formCheckPassword" action="/html/UsersHomePage.html">
+			Password:
+			<input type="password" name="password"/>
+			<center><input type="submit" name="submit" value="Login" onclick="CheckPassword(document.formCheckPassword.password)"/></center>
+		</form>
+		<form action="/html/CreateAccountPage.html">
+			<center>OR</center>
+			<center><input type="submit" name="submit" value="Create New Account"/></center>
+		</form>
+</body>
+
+</html>
